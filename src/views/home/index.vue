@@ -4,7 +4,7 @@ import ShowCard from "@/views/home/_components/ShowCard.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import type {HomeTypes} from "@/componsables/apis/homeTypes";
 
-const userAvatar = ref<string>('src/assets/img/avatar.jpg')
+const userAvatar = ref<string>('src/assets/img/avatar.jpg');
 
 /** ===== 展示卡片初始化-start ===== **/
 // 暂时卡片数据
