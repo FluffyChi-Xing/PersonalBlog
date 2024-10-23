@@ -43,6 +43,10 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
     link: '/'
   }
 ])
+
+function avatarErrorHandle() {
+  userAvatar.value = 'https://picsum.photos/200/300?random=1'
+}
 /** ===== 展示卡片初始化-end ===== **/
 </script>
 
@@ -56,7 +60,13 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
           <!-- user avatar -->
           <div class="w-full h-1/2 flex items-center relative justify-center lg:h-full">
             <div class="w-[200px] h-[200px] absolute flex avatar-container" />
-            <el-avatar class="z-[99]" :src="userAvatar" fit="cover" :size="200" />
+            <el-avatar
+              class="z-[99]"
+              :src="userAvatar"
+              fit="cover"
+              :size="200"
+              @error="avatarErrorHandle"
+            />
           </div>
           <!-- description -->
           <div class="w-full h-1/2 flex flex-col lg:h-full">
