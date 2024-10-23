@@ -10,11 +10,6 @@ const props = withDefaults(defineProps<{
 }>(), {
   title: '展示卡片',
   desc: '这是一个展示卡片这是一个展示卡片这是一个展示卡片这是一个展示卡片',
-  img: [
-    'https://picsum.photos/200/300?1',
-    'https://picsum.photos/200/300?2',
-    'https://picsum.photos/200/300?3'
-  ],
   label: '🚀',
   link: '/'
 })

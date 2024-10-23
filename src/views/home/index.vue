@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import ShowCard from "@/views/home/_components/ShowCard.vue";
 import TheFooter from "@/components/TheFooter.vue";
-import {HomeTypes} from "@/componsables/apis/homeTypes";
+import type {HomeTypes} from "@/componsables/apis/homeTypes";
 
 const userAvatar = ref<string>('src/assets/img/avatar.jpg')
 
