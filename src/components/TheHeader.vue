@@ -78,6 +78,7 @@ watch(() => route.path, () => {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   -webkit-backdrop-filter: blur(15.5px);
   backdrop-filter: saturate(50%) blur(4px);
+  mix-blend-mode: difference;
 }
 
 .github {

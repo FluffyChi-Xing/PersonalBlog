@@ -32,19 +32,19 @@ function handleTouch() {
     <!-- desc part -->
     <div class="w-1/2 h-full flex flex-col px-4">
       <!-- label -->
-      <div class="w-full h-10 flex">
+      <div class="w-full words h-10 flex">
         <span class="w-10 h-full flex bg-[#E7E8EC80] text-[1.5rem] rounded-[5px] overflow-hidden items-center justify-center">
           {{ label }}
         </span>
       </div>
       <!-- title -->
-      <div class="w-full h-auto text-[1.0rem] max-w-[200px] font-bold flex whitespace-nowrap text-ellipsis overflow-hidden text-white">
+      <div class="w-full words h-auto text-[1.0rem] max-w-[200px] font-bold flex whitespace-nowrap text-ellipsis overflow-hidden text-white">
         {{ title }}
       </div>
       <!-- link -->
       <div
         style="height: calc(100% - 88px)"
-        class="w-full flex text-ellipsis overflow-hidden text-gray-300"
+        class="w-full words flex text-ellipsis overflow-hidden text-gray-300"
       >
         {{ desc }}
       </div>

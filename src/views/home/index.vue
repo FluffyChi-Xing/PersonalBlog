@@ -80,13 +80,13 @@ function routerGallery() {
           </div>
           <!-- description -->
           <div class="w-full select-none h-1/2 flex flex-col lg:h-full">
-            <div class="w-full h-auto text-[3rem] lg:text-[4rem] flex whitespace-pre-line desc-name">
+            <div class="w-full words h-auto text-[3rem] lg:text-[4rem] flex whitespace-pre-line desc-name">
               炽煋
             </div>
-            <div class="w-full text-gray-200 text-[3rem] lg:text-[4rem] font-bold text-ellipsis h-auto flex whitespace-pre-line">
+            <div class="w-full words text-gray-200 text-[3rem] lg:text-[4rem] font-bold text-ellipsis h-auto flex whitespace-pre-line">
               FluffyChi_Xing
             </div>
-            <div class="w-full h-auto text-[2rem] lg:text-[2rem] text-gray-300 flex items-center">
+            <div class="w-full words h-auto text-[2rem] lg:text-[2rem] text-gray-300 flex items-center">
               炽煋的个人博客
             </div>
             <div class="w-full h-auto flex items-center">
@@ -116,7 +116,6 @@ function routerGallery() {
 </template>
 
 <style scoped>
-
 .desc-name {
   background: -webkit-linear-gradient(120deg, theme('colors.darkTheme') -80%, theme('colors.theme'));
   background-clip: text;
