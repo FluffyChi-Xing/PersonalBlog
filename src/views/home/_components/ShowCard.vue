@@ -27,7 +27,7 @@ function handleTouch() {
 <template>
   <div
     @click="handleTouch"
-    class="w-full h-full max-h-60 flex show-card p-4"
+    class="w-full h-full max-h-60 select-none flex show-card p-4"
   >
     <!-- desc part -->
     <div class="w-1/2 h-full flex flex-col px-4">
@@ -38,7 +38,7 @@ function handleTouch() {
         </span>
       </div>
       <!-- title -->
-      <div class="w-full h-auto text-[1.5rem] max-w-[200px] font-bold flex whitespace-nowrap text-ellipsis overflow-hidden text-white">
+      <div class="w-full h-auto text-[1.0rem] max-w-[200px] font-bold flex whitespace-nowrap text-ellipsis overflow-hidden text-white">
         {{ title }}
       </div>
       <!-- link -->
@@ -59,24 +59,14 @@ function handleTouch() {
         :key="index"
         :src="item"
         alt="图片"
-        class="w-full h-full flex object-cover"
+        loading="lazy"
+        class="w-full h-full flex object-cover rounded-[10px] overflow-hidden"
       />
     </div>
   </div>
 </template>
 
 <style scoped>
-.show-card {
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(9.4px);
-  -webkit-backdrop-filter: blur(9.4px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  transition: all .2s ease-in-out;
-  cursor: pointer;
-}
-
 .show-card:hover {
   scale: 1.05;
   box-shadow: 0 4px 30px rgba(197, 195, 195, 0.41);

@@ -19,6 +19,25 @@ const router = createRouter({
             title: '首页'
           },
           component: () => import('@/views/home/index.vue')
+        },
+        {
+          path: '/blog',
+          name: 'blog',
+          meta: {
+            title: '博客'
+
+          },
+          component: () => import('@/views/blog/index.vue'),
+          children: [
+            {
+              path: '',
+              name: 'blog-list',
+              meta: {
+                title: '博客 | 博客列表'
+              },
+              component: () => import('@/views/blog/_components/BlogList.vue')
+            }
+          ]
         }
       ]
     }

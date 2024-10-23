@@ -13,9 +13,5 @@ import TheHeader from "@/components/TheHeader.vue";
 </template>
 
 <style scoped>
-.bg {
-  background-image: url("https://bing.img.run/m.php");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 </style>

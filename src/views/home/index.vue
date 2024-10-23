@@ -3,9 +3,11 @@ import { ref } from 'vue';
 import ShowCard from "@/views/home/_components/ShowCard.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import type {HomeTypes} from "@/componsables/apis/homeTypes";
+import { useRouter } from "vue-router";
 
+
+const router = useRouter()
 const userAvatar = ref<string>('src/assets/img/avatar.jpg');
-
 /** ===== 展示卡片初始化-start ===== **/
 // 暂时卡片数据
 
@@ -20,7 +22,7 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
       'https://picsum.photos/200/300?2',
       'https://picsum.photos/200/300?3'
     ],
-    link: '/'
+    link: '/blog'
   },
   {
     id: 2,
@@ -47,6 +49,10 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
 function avatarErrorHandle() {
   userAvatar.value = 'https://picsum.photos/200/300?random=1'
 }
+
+function routerBlog() {
+  router.push('/blog')
+}
 /** ===== 展示卡片初始化-end ===== **/
 </script>
 
@@ -61,7 +67,7 @@ function avatarErrorHandle() {
           <div class="w-full h-1/2 flex items-center relative justify-center lg:h-full">
             <div class="w-[200px] h-[200px] absolute flex avatar-container" />
             <el-avatar
-              class="z-[99]"
+              class="z-[99] select-none"
               :src="userAvatar"
               fit="cover"
               :size="200"
@@ -69,7 +75,7 @@ function avatarErrorHandle() {
             />
           </div>
           <!-- description -->
-          <div class="w-full h-1/2 flex flex-col lg:h-full">
+          <div class="w-full select-none h-1/2 flex flex-col lg:h-full">
             <div class="w-full h-auto text-[3rem] lg:text-[4rem] flex whitespace-pre-line desc-name">
               炽煋
             </div>
@@ -80,7 +86,7 @@ function avatarErrorHandle() {
               炽煋的个人博客
             </div>
             <div class="w-full h-auto flex items-center">
-              <el-button size="large" round class="primary-btn mr-2">我的博客</el-button>
+              <el-button @click="routerBlog" size="large" round class="primary-btn mr-2">我的博客</el-button>
               <el-button size="large" round class="other-btn mr-2">我的画廊</el-button>
               <el-button size="large" round class="other-btn mr-2">我的简介</el-button>
             </div>
