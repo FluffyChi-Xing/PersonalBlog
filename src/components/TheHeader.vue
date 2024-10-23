@@ -8,6 +8,7 @@ import NestMenu from "@/components/NestMenu.vue";
 const router = useRouter();
 const route = useRoute();
 /** ===== 导航菜单初始化-start ===== **/
+const github = ref<string>('/static/images/github.png');
 const menuData = ref<BlogTypes.BlogMenu[]>([
   {
     index: '1',
@@ -31,10 +32,18 @@ function checkPath() {
   }
 }
 
+function routerGithub() {
+  window.open('https://github.com/FluffyChi-Xing/PersonalBlog')
+}
+
 watch(() => route.path, () => {
   checkPath();
 })
 /** ===== 导航菜单初始化-end ===== **/
+
+/** ===== 夜间模式-start ===== **/
+const darkMode = ref<boolean>(false)
+/** ===== 夜间模式-end ===== **/
 </script>
 
 <template>
@@ -60,14 +69,28 @@ watch(() => route.path, () => {
       </el-menu>
     </div>
     <!-- functional banner -->
-    <div class="w-full ml-auto max-w-[100px] justify-end h-full flex items-center">
+    <div class="w-auto ml-auto max-w-[100px] justify-end h-full flex items-center">
+      <!-- dark mode -->
+      <el-tooltip
+        effect="dark"
+        content="夜间模式"
+        placement="bottom"
+      >
+        <el-switch v-model="darkMode" size="small" />
+      </el-tooltip>
+      <el-divider direction="vertical" />
       <!-- github link -->
-      <div class="w-10 h-10 flex github cursor-pointer" />
+      <div @click="routerGithub" class="w-10 h-10 words flex cursor-pointer">
+        <img :src="github" alt="github" loading="lazy" class="w-10 h-10 github flex object-contain"/>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.github {
+  filter: invert(1);
+}
 
 .header {
   border-bottom: 1px solid rgba(234, 234, 234, 0.3);
@@ -76,12 +99,5 @@ watch(() => route.path, () => {
   -webkit-backdrop-filter: blur(15.5px);
   backdrop-filter: saturate(50%) blur(4px);
   mix-blend-mode: difference;
-}
-
-.github {
-  background-image: url("src/assets/img/github.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 </style>
