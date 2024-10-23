@@ -29,7 +29,7 @@ const menuData = ref<BlogTypes.BlogMenu[]>([
   }
 ])
 function checkPath() {
-  if (route.path.includes('/blog')) {
+  if (route.path !== '/') {
     return true;
   }
 }

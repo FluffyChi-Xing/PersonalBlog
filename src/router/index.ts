@@ -38,6 +38,14 @@ const router = createRouter({
               component: () => import('@/views/blog/_components/BlogList.vue')
             }
           ]
+        },
+        {
+          path: '/gallery',
+          name: 'gallery',
+          meta: {
+            title: '画廊'
+          },
+          component: () => import('@/views/gallery/index.vue')
         }
       ]
     }

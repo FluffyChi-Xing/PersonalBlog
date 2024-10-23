@@ -32,7 +32,7 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
     img: [
       'https://picsum.photos/200/300?4',
     ],
-    link: '/'
+    link: '/gallery'
   },
   {
     id: 3,
@@ -52,6 +52,10 @@ function avatarErrorHandle() {
 
 function routerBlog() {
   router.push('/blog')
+}
+
+function routerGallery() {
+  router.push('/gallery')
 }
 /** ===== 展示卡片初始化-end ===== **/
 </script>
@@ -87,7 +91,7 @@ function routerBlog() {
             </div>
             <div class="w-full h-auto flex items-center">
               <el-button @click="routerBlog" size="large" round class="primary-btn mr-2">我的博客</el-button>
-              <el-button size="large" round class="other-btn mr-2">我的画廊</el-button>
+              <el-button @click="routerGallery" size="large" round class="other-btn mr-2">我的画廊</el-button>
               <el-button size="large" round class="other-btn mr-2">我的简介</el-button>
             </div>
           </div>
