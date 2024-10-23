@@ -7,9 +7,6 @@ import NestMenu from "@/components/NestMenu.vue";
 
 const router = useRouter();
 const route = useRoute();
-
-
-
 /** ===== 导航菜单初始化-start ===== **/
 const menuData = ref<BlogTypes.BlogMenu[]>([
   {
