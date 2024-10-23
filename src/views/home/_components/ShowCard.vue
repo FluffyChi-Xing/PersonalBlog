@@ -52,7 +52,7 @@ function handleTouch() {
     <!-- img part -->
     <div
       class="w-1/2 h-full"
-      :class="props.img?.length > 1 ? 'grid grid-cols-2 gap-2 grid-rows-2' : 'flex'"
+      :class="Number(props.img?.length) > 1 ? 'grid grid-cols-2 gap-2 grid-rows-2' : 'flex'"
     >
       <img
         v-for="(item, index) in props.img"
