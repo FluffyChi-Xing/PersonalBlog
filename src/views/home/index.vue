@@ -7,7 +7,7 @@ import { useRouter } from "vue-router";
 
 
 const router = useRouter()
-const userAvatar = ref<string>('public/static/images/avatar.jpg');
+const userAvatar = ref<string>('/static/images/avatar.jpg');
 /** ===== 展示卡片初始化-start ===== **/
 // 暂时卡片数据
 
