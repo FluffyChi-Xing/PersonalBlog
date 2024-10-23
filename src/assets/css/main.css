@@ -26,18 +26,20 @@ a,
 }
 
 .bg {
-  background-image: url("https://bing.img.run/m.php");
+  background-image: url("public/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 
 .show-card {
   border-radius: 10px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.29);
   background: rgba(255, 255, 255, 0);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(9.4px);
   -webkit-backdrop-filter: blur(9.4px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
