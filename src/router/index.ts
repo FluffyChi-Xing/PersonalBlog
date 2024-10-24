@@ -54,6 +54,22 @@ const router = createRouter({
             title: '画廊'
           },
           component: () => import('@/views/gallery/index.vue')
+        },
+        {
+          path: '/friends',
+          name: 'friend',
+          meta: {
+            title: '友链'
+          },
+          component: () => import('@/views/friend/index.vue')
+        },
+        {
+          path: '/about',
+          name: 'about',
+          meta: {
+            title: '关于'
+          },
+          component: () => import('@/views/about/index.vue')
         }
       ]
     }

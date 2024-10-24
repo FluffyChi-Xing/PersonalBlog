@@ -36,7 +36,7 @@ onMounted(async () => {
 
 <template>
   <div class="w-full h-full flex flex-col max-w-[1280px]">
-    <el-scrollbar class="w-full">
+    <el-scrollbar class="w-full px-4">
       <!-- the header -->
       <PageHeader title="博客详情" />
       <!-- the content -->
