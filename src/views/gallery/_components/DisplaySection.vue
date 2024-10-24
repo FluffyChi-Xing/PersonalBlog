@@ -30,7 +30,7 @@ watch(() => props.imgList, () => {
 
 <template>
   <div
-    class="w-full h-full max-h-60 show-card p-2 my-4 overflow-hidden"
+    class="w-full h-full min-h-56 show-card p-2 my-4 overflow-hidden"
     :class="imageList?.length > 1 ? 'grid-cols-2 grid gap-2' : 'flex'"
   >
     <!-- first -->

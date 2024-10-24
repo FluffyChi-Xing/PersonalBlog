@@ -22,13 +22,56 @@ const galleryList = ref<galleryListTypes[]>([
       'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231105_181737_edit_754721217494368.jpg',
       'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231016_154014.jpg'
     ]
+  },
+  {
+    id: 3,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/885570251014404524.jpg'
+    ]
+  },
+  {
+    id: 4,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/780890258719004807.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/779285548341852197.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/749885757155923936.jpg'
+    ]
+  },
+  {
+    id: 5,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/713828393840448649.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/705011861892907513.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/684632934173980363.jpg'
+    ]
+  },
+  {
+    id: 6,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/543658373000355104.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/534558333247919034.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/363514661207505486.jpg'
+    ]
+  },
+  {
+    id: 7,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/258114280515260737.jpg'
+    ]
+  },
+  {
+    id: 8,
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/243905315136830826.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/140373955344544643.jpg'
+    ]
   }
 ])
 /** ===== 图库卡片初始化-end ===== **/
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-col bg py-20 relative">
+  <div class="w-full h-full flex flex-col bg py-20 lg:pt-20 lg:pb-0 relative">
     <el-scrollbar class="w-full px-4">
       <!-- page header -->
       <div class="w-full h-auto flex px-4">

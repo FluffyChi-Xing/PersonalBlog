@@ -18,7 +18,7 @@ const menuData = ref<BlogTypes.BlogMenu[]>([
   {
     index: '2',
     label: '友链',
-    route: '/link',
+    route: '/friends',
   },
   {
     index: '3',
@@ -27,8 +27,13 @@ const menuData = ref<BlogTypes.BlogMenu[]>([
   },
   {
     index: '4',
-    label: '星际公民',
-    route: '/starCitizen',
+    label: '博客',
+    route: '/blog',
+  },
+  {
+    index: '5',
+    label: '画廊',
+    route: '/gallery',
   }
 ])
 function checkPath() {
