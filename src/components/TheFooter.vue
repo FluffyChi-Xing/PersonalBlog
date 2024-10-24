@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="w-full h-auto min-h-20 flex flex-col justify-center items-center mt-auto">
+  <div class="w-full words h-auto min-h-20 flex flex-col justify-center items-center mt-auto">
     <div class="w-auto h-auto whitespace-nowrap overflow-hidden text-ellipsis text-[10px] text-gray-200">
       FluffyChi_Xing 版权所有 © 2024
     </div>
