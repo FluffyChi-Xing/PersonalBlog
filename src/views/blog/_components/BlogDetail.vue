@@ -16,7 +16,7 @@ const text = ref('# Hello Editor');
 function checkContent() {
   if (route.params.id) {
     routeParams.value = String(route.params.id);
-    console.log(docModules['intro'], routeParams.value)
+    console.log(typeof docModules, docModules, routeParams.value)
     const result = docModules[routeParams.value]
     if (result) {
       text.value = result;
