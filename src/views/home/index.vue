@@ -83,6 +83,10 @@ function routerGallery() {
   router.push('/gallery')
 }
 
+function routerAbout() {
+  router.push('/about')
+}
+
 async function getData() {
   const result = await $api.getRandomImg();
   if (result.data) {
@@ -129,7 +133,7 @@ onMounted(async () => {
             <div class="w-full h-auto flex items-center">
               <el-button @click="routerBlog" size="large" round class="primary-btn mr-2">我的博客</el-button>
               <el-button @click="routerGallery" size="large" round class="other-btn mr-2">我的画廊</el-button>
-              <el-button size="large" round class="other-btn mr-2">我的简介</el-button>
+              <el-button @click="routerAbout" size="large" round class="other-btn mr-2">我的简介</el-button>
             </div>
           </div>
         </div>
