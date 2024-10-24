@@ -36,6 +36,14 @@ const router = createRouter({
                 title: '博客 | 博客列表'
               },
               component: () => import('@/views/blog/_components/BlogList.vue')
+            },
+            {
+              path: '/blog/:id',
+              name: 'blog-detail',
+              meta: {
+                title: '博客 | 博客详情'
+              },
+              component: () => import('@/views/blog/_components/BlogDetail.vue')
             }
           ]
         },

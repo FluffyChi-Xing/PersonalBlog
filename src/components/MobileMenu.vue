@@ -12,6 +12,10 @@ const active = ref<number>(0)
 
 
 function checkActive() {
+  if (route.path.includes('/blog')) {
+    active.value = 1
+    return
+  }
   active.value = $enum.useValueGetKey(route.path) ;
 }
 

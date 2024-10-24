@@ -6,7 +6,14 @@ import BlogItem from "@/views/blog/_components/BlogItem.vue";
 
 
 /** ===== 文章列表初始化-start ===== **/
-const blogList = ref<BlogTypes.BlogList[]>([]);
+const blogList = ref<BlogTypes.BlogList[]>([
+  {
+    index: 'intro',
+    desc: "这是一篇关于前端",
+    date: "2024-10-24",
+    title: "写在前端的大路上",
+  }
+]);
 /** ===== 文章列表初始化-end ===== **/
 </script>
 
@@ -14,7 +21,9 @@ const blogList = ref<BlogTypes.BlogList[]>([]);
   <div class="w-full h-auto max-w-[1280px] items-center flex flex-col rounded-[10px]">
     <el-scrollbar class="w-full">
       <!-- title -->
-      <PageHeader title="博客列表" />
+      <div class="w-full h-auto flex px-4">
+        <PageHeader title="博客列表" />
+      </div>
       <!-- blog item component -->
       <div
         v-if="blogList?.length"

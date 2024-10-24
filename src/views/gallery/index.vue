@@ -31,7 +31,9 @@ const galleryList = ref<galleryListTypes[]>([
   <div class="w-full h-full flex flex-col bg py-20 relative">
     <el-scrollbar class="w-full px-4">
       <!-- page header -->
-      <PageHeader title="画廊" />
+      <div class="w-full h-auto flex px-4">
+        <PageHeader title="画廊" />
+      </div>
       <div
         class="w-full h-full px-4"
         :class="galleryList?.length > 1 ? 'flex flex-col lg:grid lg:grid-cols-3 lg:gap-4' : ''"

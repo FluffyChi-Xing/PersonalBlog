@@ -26,6 +26,6 @@ export namespace BlogTypes {
     title: string;
     desc: string;
     date: string;
-    index: number;
+    index: string;
   }
 }
