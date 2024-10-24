@@ -13,11 +13,11 @@ const route = useRoute();
 const routeParams = ref<string>('');
 const text = ref('# Hello Editor');
 
-function checkContent() {
+async function checkContent() {
   if (route.params.id) {
     routeParams.value = String(route.params.id);
     console.log(typeof docModules, docModules, routeParams.value)
-    const result = docModules[routeParams.value]
+    const result = await docModules[routeParams.value];
     if (result) {
       text.value = result;
     } else {
@@ -29,8 +29,8 @@ function checkContent() {
   }
 }
 
-onMounted(() => {
-  checkContent();
+onMounted(async () => {
+  await checkContent();
 })
 </script>
 
