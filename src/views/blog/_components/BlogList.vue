@@ -52,7 +52,6 @@ const blogList = ref<BlogTypes.BlogList[]>([
 
 <style scoped>
 :deep(.el-scrollbar__view) {
-  width: 100%;
   height: 100%;
 }
 </style>

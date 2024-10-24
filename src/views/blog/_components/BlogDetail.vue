@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-col">
+  <div class="w-full h-full flex flex-col max-w-[1280px]">
     <el-scrollbar class="w-full">
       <!-- the header -->
       <PageHeader title="博客详情" />
