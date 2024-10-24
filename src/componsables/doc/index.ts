@@ -1,12 +1,13 @@
-import {ofetch} from "ofetch";
+import { ofetch } from "ofetch";
 
-const documents = import.meta.glob('/componsables/doc/*/index.txt', { eager: true });
+const documents = import.meta.glob('./*/index.txt', { eager: true });
 console.log('获取document内容', documents);
 
 const docModules: Record<string, any> = {}; // 将home下的index.txt文件内容存储到modules中
 
 async function loadTxtContent(filePath: string): Promise<string> {
-  const response = await ofetch(filePath);
+  // 确保文件路径是相对路径
+  const response = await ofetch(new URL(filePath, import.meta.url).href);
   return await response;
 }
 
