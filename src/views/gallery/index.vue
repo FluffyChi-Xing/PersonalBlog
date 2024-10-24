@@ -13,11 +13,15 @@ interface galleryListTypes {
 const galleryList = ref<galleryListTypes[]>([
   {
     id: 1,
-    list: ['https://picsum.photos/200/300?1']
+    list: ['https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20240119_130709.jpg']
   },
   {
     id: 2,
-    list: ['https://picsum.photos/200/300?2', 'https://picsum.photos/200/300?3', 'https://picsum.photos/200/300?4']
+    list: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231113_170957_edit_1238125259337412.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231105_181737_edit_754721217494368.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231016_154014.jpg'
+    ]
   }
 ])
 /** ===== 图库卡片初始化-end ===== **/

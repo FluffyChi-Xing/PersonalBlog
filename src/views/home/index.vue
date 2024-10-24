@@ -1,48 +1,73 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import {computed, onMounted, ref} from 'vue';
 import ShowCard from "@/views/home/_components/ShowCard.vue";
 import TheFooter from "@/components/TheFooter.vue";
 import type {HomeTypes} from "@/componsables/apis/homeTypes";
 import { useRouter } from "vue-router";
+import {$api} from "@/componsables/api";
 
 
 const router = useRouter()
 const userAvatar = ref<string>('/static/images/avatar.jpg');
+const gameImg = ref<string>('https://picsum.photos/200/300?random=1');
 /** ===== 展示卡片初始化-start ===== **/
 // 暂时卡片数据
 
 const showCardData = ref<HomeTypes.homeCardTypes[]>([
   {
     id: 1,
-    label: '🚀',
-    desc: '我的博客',
-    title: 'FluffyChi_Xing',
+    label: '📖',
+    desc: 'IT 民工/PC Gamer/Furry/CIGer/P 社玩家/Javascript 爱好者',
+    title: '我的博客',
     img: [
-      'https://picsum.photos/200/300?1',
-      'https://picsum.photos/200/300?2',
-      'https://picsum.photos/200/300?3'
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20240119_124729.jpg',
     ],
     link: '/blog'
   },
   {
     id: 2,
     label: '🎨',
-    desc: '我的画廊',
-    title: '这是测试标题',
+    desc: '一些图片, 记录日常',
+    title: '我的画廊',
     img: [
-      'https://picsum.photos/200/300?4',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20240119_130709.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231113_170957_edit_1238125259337412.jpg',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/IMG_20231105_181737_edit_754721217494368.jpg'
     ],
     link: '/gallery'
   },
   {
     id: 3,
     label: '📚',
-    desc: '我的简介',
-    title: '这是测试标题uuuuuuuuuuuuuu',
+    title: '我的简介',
+    desc: '目前在校大学生，软件工程专业，IT 民工，常用技术栈Vue + Vite + TS + TW + Java等，喜欢看书',
     img: [
       'https://picsum.photos/200/300?5',
     ],
     link: '/'
+  },
+  {
+    id: 4,
+    label: '🎉',
+    title: '我的游戏',
+    desc: '星际公民/我的世界/死亡搁浅/黑悟空',
+    link: '/',
+    img: [
+      gameImg.value,
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/Minecraft%202023_1_10%2012_53_22.png',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/Death%20Stranding%202022_7_20%2010_02_47.png',
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/b1%20%20%202024_8_31%2014_52_18.png'
+    ]
+  },
+  {
+    id: 5,
+    label: '🚀',
+    title: '我的载具',
+    desc: 'Purple Syulen',
+    link: '/',
+    img: [
+      'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/Star%20Citizen%20%202024_10_14%2021_43_30.png'
+    ]
   }
 ])
 
@@ -57,6 +82,18 @@ function routerBlog() {
 function routerGallery() {
   router.push('/gallery')
 }
+
+async function getData() {
+  const result = await $api.getRandomImg();
+  if (result.data) {
+    gameImg.value = result.data[0]?.api_url;
+    showCardData.value[3].img[0] = gameImg.value; // 更新 showCardData 中的图片
+  }
+}
+
+onMounted(async () => {
+  await getData();
+})
 /** ===== 展示卡片初始化-end ===== **/
 </script>
 

@@ -24,10 +24,15 @@ const menuData = ref<BlogTypes.BlogMenu[]>([
     index: '3',
     label: '关于',
     route: '/about',
+  },
+  {
+    index: '4',
+    label: '星际公民',
+    route: '/starCitizen',
   }
 ])
 function checkPath() {
-  if (route.path !== '/') {
+  if (route.path !== '/home') {
     return true;
   }
 }
@@ -58,10 +63,8 @@ const darkMode = ref<boolean>(false)
       class="h-full hidden lg:flex"
     >
       <el-menu
-        v-if="checkPath()"
         text-color="#000"
         background-color="transparent"
-        active-text-color="#fff"
         style="width: 100%;border-bottom: none !important;"
         mode="horizontal"
       >
@@ -99,5 +102,9 @@ const darkMode = ref<boolean>(false)
   -webkit-backdrop-filter: blur(15.5px);
   backdrop-filter: saturate(50%) blur(4px);
   mix-blend-mode: difference;
+}
+
+:deep(.el-menu) {
+  filter: invert(1);
 }
 </style>

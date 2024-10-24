@@ -34,19 +34,19 @@ function handleTouch() {
       <!-- label -->
       <div class="w-full h-10 flex words">
         <span class="w-10 h-full flex bg-[#E7E8EC80] text-[1.5rem] rounded-[5px] overflow-hidden items-center justify-center">
-          {{ label }}
+          {{ label ? label : '🚀' }}
         </span>
       </div>
       <!-- title -->
       <div class="w-full h-auto text-[1.0rem] max-w-[200px] font-bold flex whitespace-nowrap text-ellipsis overflow-hidden text-white">
-        {{ title }}
+        {{ title ? title: '暂无标题' }}
       </div>
       <!-- link -->
       <div
         style="height: calc(100% - 88px)"
-        class="w-full flex text-ellipsis overflow-hidden text-white"
+        class="w-full flex text-ellipsis whitespace-pre-line min-h-10 text-white"
       >
-        {{ desc }}
+        {{ desc ? desc : '暂无简介' }}
       </div>
     </div>
     <!-- img part -->
