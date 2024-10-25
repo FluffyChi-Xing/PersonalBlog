@@ -3,6 +3,7 @@ import { ref } from 'vue';
 import MobileMenu from "@/components/MobileMenu.vue";
 import PageHeader from "@/components/PageHeader.vue";
 import DisplaySection from "@/views/gallery/_components/DisplaySection.vue";
+import TheFooter from "@/components/TheFooter.vue";
 
 
 /** ===== 图库卡片初始化-start ===== **/

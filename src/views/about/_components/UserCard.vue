@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import docModules from "@/componsables/doc";
+import {getListLength} from "@/componsables/utils/utils";
+import {FriendsList} from "@/componsables/apis/staticCode";
 
 
 const avatar = ref<string>('/static/images/avatar.jpg');
@@ -16,7 +18,7 @@ const baseInfo = ref<baseInfoTypes[]>([
   },
   {
     label: '友链数',
-    value: 0,
+    value: getListLength(FriendsList),
   },
   {
     label: '文章数',

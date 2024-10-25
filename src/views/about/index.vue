@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import MobileMenu from "@/components/MobileMenu.vue";
 import UserCard from "@/views/about/_components/UserCard.vue";
+import TheFooter from "@/components/TheFooter.vue";
 </script>
 
 <template>
-  <div class="w-full h-full flex flex-col bg">
+  <div class="w-full h-full max-w-[1280px] mx-auto flex flex-col">
     <el-scrollbar class="w-full px-8 py-20">
       <div class="w-full h-full flex-col lg:grid lg:grid-cols-3 lg:gap-4">
         <!-- user card -->

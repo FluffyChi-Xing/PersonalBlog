@@ -39,6 +39,7 @@ function handleRoute() {
 
 <style scoped>
 .show-card:hover {
+  scale: 1.01;
   box-shadow: 0 4px 30px rgba(197, 195, 195, 0.41);
 }
 </style>

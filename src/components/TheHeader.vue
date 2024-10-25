@@ -8,6 +8,7 @@ import NestMenu from "@/components/NestMenu.vue";
 const router = useRouter();
 const route = useRoute();
 /** ===== 导航菜单初始化-start ===== **/
+const defaultMenu = ref<string>('1')
 const github = ref<string>('/static/images/github.png');
 const menuData = ref<BlogTypes.BlogMenu[]>([
   {
@@ -37,8 +38,28 @@ const menuData = ref<BlogTypes.BlogMenu[]>([
   }
 ])
 function checkPath() {
-  if (route.path !== '/home') {
-    return true;
+  switch (route.path) {
+    case '/':
+      defaultMenu.value = '1'
+      break;
+    case '/home':
+      defaultMenu.value = '1'
+      break;
+    case '/friends':
+      defaultMenu.value = '2'
+      break;
+    case '/about':
+      defaultMenu.value = '3'
+      break;
+    case '/blog':
+      defaultMenu.value = '4'
+      break;
+    case '/blog/:id':
+      defaultMenu.value = '4'
+      break;
+    case '/gallery':
+      defaultMenu.value = '5'
+      break;
   }
 }
 
@@ -71,6 +92,7 @@ const darkMode = ref<boolean>(false)
         text-color="#000"
         background-color="transparent"
         style="width: 100%;border-bottom: none !important;"
+        :default-active="defaultMenu"
         mode="horizontal"
       >
         <NestMenu :data="menuData" />

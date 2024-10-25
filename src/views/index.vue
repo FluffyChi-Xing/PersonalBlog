@@ -1,5 +1,16 @@
 <script setup lang="ts">
 import TheHeader from "@/components/TheHeader.vue";
+import docModules from "@/componsables/doc";
+import {onMounted} from "vue";
+
+
+function initBlogScan() {
+  const res = docModules['someKey']
+}
+
+onMounted(() => {
+  initBlogScan()
+})
 </script>
 
 <template>
