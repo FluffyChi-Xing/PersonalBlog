@@ -12,6 +12,12 @@ const blogList = ref<BlogTypes.BlogList[]>([
     desc: "这是一篇关于前端",
     date: "2024-10-24",
     title: "写在前端的大路上",
+  },
+  {
+    index: 'babel',
+    desc: '关于Babel的基本情况',
+    date: '2024-10-26',
+    title: '什么是Babel'
   }
 ]);
 /** ===== 文章列表初始化-end ===== **/
