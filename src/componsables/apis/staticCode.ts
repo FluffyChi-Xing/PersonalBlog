@@ -10,5 +10,17 @@ export const FriendsList = [
     name: '秋实 Allen-you',
     link: 'https://allenyou.top/',
     avatar: 'https://blog-oss.allenyou.top/image/657d2f0a14cd2.png'
+  },
+  {
+    index: 3,
+    name: 'Joe的博客',
+    link: 'https://www.furryjoe.site/',
+    avatar: '/'
+  },
+  {
+    index: 4,
+    name: 'LinBlog 凌博客',
+    link: 'https://blog.risenetwork.top/',
+    avatar: '/'
   }
 ]
