@@ -68,6 +68,14 @@ const showCardData = ref<HomeTypes.homeCardTypes[]>([
     img: [
       'https://nest-upload-oss.oss-cn-beijing.aliyuncs.com/images/Star%20Citizen%20%202024_10_14%2021_43_30.png'
     ]
+  },
+  {
+    id: 6,
+    label: '🥰',
+    title: 'Contributions',
+    desc: 'Github Contributions',
+    link: '/about',
+    img: ['https://green-wall.leoku.dev/api/og/share/FluffyChi-Xing'],
   }
 ])
 
