@@ -18,6 +18,12 @@ const blogList = ref<BlogTypes.BlogList[]>([
     desc: '关于Babel的基本情况',
     date: '2024-10-26',
     title: '什么是Babel'
+  },
+  {
+    index: 'pdd',
+    desc: '拼多多技术面 笔试题',
+    date: '2025-03-09',
+    title: 'PDD 技术面笔试'
   }
 ]);
 /** ===== 文章列表初始化-end ===== **/
